@@ -12,8 +12,7 @@ from oauth2client.service_account import ServiceAccountCredentials
 # Google Sheets Setup
 # --------------------------
 SHEET_NAME = "New"
-sco
-pe = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
+scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
 
 with open("/etc/secrets/google_creds.json") as f:
     creds_dict = json.load(f)
@@ -138,4 +137,5 @@ for p in properties:
     ])
 sheet.update('A1', [header] + rows)
 print("🎉 Done! Google Sheet updated successfully.")
+
 
